@@ -1,0 +1,38 @@
+var Set_A:Set<String> = ["a","b","c","g","d","f"]
+var Set_B:Set<String> = ["l","m","o","b","c","h"]
+var Set_C:Set<String> = ["c","d","f","h","j","k","i"]
+
+print("1. How many elements are there in set A and B?")
+print("There are (",Set_A.union(Set_B).subtracting(Set_C).count, ") elements in set A and B");
+print("--")
+
+
+print("2. How many elements are there in B that is not part of A and C")
+print("There are (",Set_B.subtracting(Set_A).subtracting(Set_C).count,") elements that is no t part of set A and C");
+print("--")
+
+print("3. [h, i, j, k]")
+print("Answer : ",Set_C.subtracting(Set_A).sorted());
+print("--")
+
+print("4. [c, d, f]")
+print("Answer : ",Set_A.intersection(Set_C).sorted());
+print("--")
+
+
+print("5. [b, c, h]")
+print("Answer : ",Set_A.union(Set_C).intersection(Set_B).sorted());
+print("--")
+
+print("6. [d, f]")
+print("Answer : ",Set_A.intersection(Set_C).subtracting(Set_B).sorted());
+print("--")
+
+
+print("7. [c]")
+print("Answer : ",Set_C.intersection(Set_B).intersection(Set_A));
+print("--")
+
+print("8. [l, m, o]")
+print("Answer : ",Set_B.subtracting(Set_A).subtracting(Set_C).sorted());
+print("--")
