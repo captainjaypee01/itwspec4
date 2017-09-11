@@ -1,0 +1,24 @@
+let pt = (0,5,5) // xyz coordinates
+
+switch(pt){
+	case (0,0,0):
+		print("The point is in ORIGIN")
+	case (0...4,0...4,0...4):
+		print("Inside in a given box")
+	
+	case (let x, let y, 0):
+		print("On xy - plane (\(x),\(y),0)")
+		print("The value of x is \(x) in x-axis and y is \(y) in y-axis while z is 0 in z-axis")
+	
+	case (let x, 0, let z):
+		print("On xz - plane (\(x),0,\(z))")
+		print("The value of x is \(x) in x-axis and z is \(z) in z-axis while y is 0 in y-axis")
+	
+	case (0, let y, let z):
+		print("On yz - plane (0,\(y),\(z))")
+		print("The value of y is \(y) in y-axis and z is \(z) in z-axis while x is 0 in x-axis")
+
+	default:
+		print("Outside the box")
+}
+
