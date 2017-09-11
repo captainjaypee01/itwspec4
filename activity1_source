@@ -1,0 +1,33 @@
+
+
+http://swift.sandbox.bluemix.net/#/repl/59ae664a1a26684855c44132
+
+// Write some awesome Swift code, or import libraries like "Foundation",
+// "Dispatch", or "Glibc"
+
+
+let pt = (1,4)
+
+switch (pt) {
+case (0,0):
+print("origin")
+
+
+case (1,2),(2,4),(3,6):
+print("In the given diagonal line")
+
+case (let x,let y) where y > 0 && x > 0:
+print("First Quadrant")
+case (let x, let y) where y > 0 && x < 0:
+print("Second Quadrant")
+case (let x,-2...0) where x < 0:
+print("Third Quadrant")
+//case (let x,let y) where y < 0 && x > 0:
+// print("Fourth Quadrant")
+
+case (let x, -2...0)where x > 0:
+print("Fourth Quadrant")
+
+default:
+print("Out of Boundary")
+}
